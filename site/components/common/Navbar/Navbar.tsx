@@ -1,9 +1,10 @@
 import { FC } from 'react'
+import { Logo, Container } from '@components/ui'
+import { Searchbar, UserNav } from '@components/common'
 import Link from 'next/link'
 import s from './Navbar.module.css'
 import NavbarRoot from './NavbarRoot'
-import { Logo, Container } from '@components/ui'
-import { Searchbar, UserNav } from '@components/common'
+import NavbarLinks from './Navbarlinks'
 
 interface Link {
   href: string
@@ -17,6 +18,7 @@ interface NavbarProps {
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
     <Container clean className={s.container}>
+      <NavbarLinks />
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/">

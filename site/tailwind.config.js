@@ -64,6 +64,9 @@ module.exports = {
       scale: {
         120: '1.2',
       },
+      screens: {
+        mobile: '400px',
+      },
     },
   },
 }
