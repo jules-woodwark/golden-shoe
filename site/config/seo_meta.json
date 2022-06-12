@@ -1,0 +1,25 @@
+{
+  "title": "Shop Women's, Men's & Kids' Shoes | Golden Shoe",
+  "titleTemplate": "%s - Golden Shoe",
+  "description": "Golden Shoe Demo - https://golden-shoe-j5hb.vercel.app/",
+  "openGraph": {
+    "title": "Shop Women's, Men's & Kids' Shoes | Golden Shoe",
+    "description": "Next.js Commerce - https://golden-shoe-j5hb.vercel.app/",
+    "type": "website",
+    "url": "https://golden-shoe-j5hb.vercel.app/",
+    "site_name": "Golden Shoe",
+    "images": [
+      {
+        "url": "/card.png",
+        "width": "800",
+        "height": "600",
+        "alt": "Golden Shoe Demo"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@goldenshoedemo",
+    "site": "@goldenshoedemo",
+    "cardType": "summary_large_image"
+  }
+}

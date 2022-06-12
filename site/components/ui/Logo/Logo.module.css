@@ -1,0 +1,7 @@
+.logo {
+  @apply cursor-pointer transform duration-100 ease-in-out font-logo m-2 text-3xl text-amber-500 tracking-wider font-semibold whitespace-nowrap;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
