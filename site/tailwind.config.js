@@ -48,6 +48,9 @@ module.exports = {
       fontFamily: {
         logo: ['Caveat'],
       },
+      fontSize: {
+        normal: '1rem',
+      },
       textColor: {
         base: 'var(--text-base)',
         primary: 'var(--text-primary)',

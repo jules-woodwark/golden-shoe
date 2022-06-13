@@ -1,19 +1,19 @@
-import { FC } from 'react';
-import Link from 'next/link';
-import s from './Dropdown.module.css';
+import { FC } from 'react'
+import Link from 'next/link'
+import s from './Dropdown.module.css'
 
 interface Props {
-  isShown: boolean;
+  isShown: boolean
   categories: {
-    name: string;
-    slug: string;
-  }[];
-  toggleDropdown: () => void;
+    name: string
+    slug: string
+  }[]
+  toggleDropdown: () => void
 }
 
 const Dropdown: FC<Props> = ({ categories, isShown, toggleDropdown }) => {
   const categoriesMap = categories.map((category, i) => {
-    const { name, slug } = category;
+    const { name, slug } = category
 
     return (
       <li key={i} className={s.listIten}>
@@ -21,8 +21,8 @@ const Dropdown: FC<Props> = ({ categories, isShown, toggleDropdown }) => {
           <a>{name}</a>
         </Link>
       </li>
-    );
-  });
+    )
+  })
 
   return isShown ? (
     <div className={s.root}>
@@ -36,7 +36,7 @@ const Dropdown: FC<Props> = ({ categories, isShown, toggleDropdown }) => {
         {categoriesMap}
       </ul>
     </div>
-  ) : null;
-};
+  ) : null
+}
 
-export default Dropdown;
+export default Dropdown

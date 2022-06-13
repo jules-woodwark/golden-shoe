@@ -2,47 +2,47 @@ const SUB_CATEGORIES = {
   womensSubCategories: [
     {
       name: 'High Heels',
-      slug: 'high-heels',
+      slug: '/high-heels',
     },
     {
       name: 'Pumps',
-      slug: 'pumps',
+      slug: '/pumps',
     },
     {
       name: 'Sandals',
-      slug: 'womens-sandals',
+      slug: '/womens-sandals',
     },
     {
       name: 'Slippers',
-      slug: 'womens-slippers',
+      slug: '/womens-slippers',
     },
     {
       name: 'Trainers',
-      slug: 'womens-trainers',
+      slug: '/womens-trainers',
     },
   ],
   mensSubCategories: [
     {
       name: 'Sandals',
-      slug: 'mens-sandals',
+      slug: '/mens-sandals',
     },
     {
       name: 'Slippers',
-      slug: 'mens-slippers',
+      slug: '/mens-slippers',
     },
     {
       name: 'Trainers',
-      slug: 'mens-trainers',
+      slug: '/mens-trainers',
     },
   ],
   kidsSubCategories: [
     {
       name: 'Boots',
-      slug: 'kids-sandals',
+      slug: '/kids-sandals',
     },
     {
       name: 'Trainers',
-      slug: 'kids-trainers',
+      slug: '/kids-trainers',
     },
   ],
 };
@@ -50,26 +50,26 @@ const SUB_CATEGORIES = {
 const NAVIGATION_DATA = [
   {
     name: "Women's",
-    slug: 'womens',
+    slug: 'search/womens',
     categories: SUB_CATEGORIES.womensSubCategories,
   },
   {
     name: "Men's",
-    slug: 'mens',
+    slug: 'search/mens',
     categories: SUB_CATEGORIES.mensSubCategories,
   },
   {
     name: 'Kids',
-    slug: 'kids',
+    slug: 'search/kids',
     categories: SUB_CATEGORIES.kidsSubCategories,
   },
   {
     name: 'Summer',
-    slug: 'summer',
+    slug: 'search/summer',
   },
   {
     name: 'Sale',
-    slug: 'sale',
+    slug: 'search/sale',
   },
 ];
 

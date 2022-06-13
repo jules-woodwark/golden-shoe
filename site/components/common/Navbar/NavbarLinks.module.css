@@ -1,5 +1,9 @@
+.root {
+  @apply m-auto min-w-full bg-paletteBlue;
+}
+
 .container {
-  @apply bg-paletteBlue text-white text-sm flex px-4 py-2 mobile:text-normal;
+  @apply text-white text-sm flex px-4 py-2 mobile:text-normal;
 }
 
 .listItem {

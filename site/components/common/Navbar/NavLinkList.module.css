@@ -1,0 +1,3 @@
+.navMenu {
+  @apply mx-8 w-full flex-1 lg:flex xl:space-x-6 xl:ml-6;
+}

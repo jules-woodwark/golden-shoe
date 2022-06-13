@@ -1,0 +1,19 @@
+.navItem {
+  @apply h-auto;
+}
+
+.navLink {
+  @apply block lg:p-6 lg:text-base font-bold;
+
+  &:hover {
+    @apply text-accent-9 text-amber-500 underline underline-offset-8;
+  }
+
+  &:focus {
+    @apply outline-none text-accent-8;
+  }
+
+  &:nth-child(5) {
+    @apply text-rose-600;
+  }
+}

@@ -1,5 +1,5 @@
 .root {
-  @apply absolute left-0 p-8 mb-16 sm:mb-0 shadow-xl bg-primary container mx-auto min-w-full flex flex-col;
+  @apply absolute left-0 p-8 mb-16 mt-2 sm:mb-0 shadow-xl bg-primary container mx-auto min-w-full flex flex-col;
 }
 
 .list {

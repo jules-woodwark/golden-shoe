@@ -1,10 +1,12 @@
 import { FC } from 'react'
 import { Logo, Container } from '@components/ui'
 import { Searchbar, UserNav } from '@components/common'
+import { NAVIGATION_DATA } from 'constants/index'
 import Link from 'next/link'
-import s from './Navbar.module.css'
-import NavbarRoot from './NavbarRoot'
 import NavbarLinks from './Navbarlinks'
+import NavbarRoot from './NavbarRoot'
+import NavLinkList from './NavLinkList'
+import s from './Navbar.module.css'
 
 interface Link {
   href: string
@@ -17,32 +19,25 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
+    <NavbarLinks />
     <Container clean className={s.container}>
-      <NavbarLinks />
       <div className={s.nav}>
-        <div className="flex items-center flex-1">
+        <div className="flex items-center flex-1 justify-items-stretch">
           <Link href="/">
             <a className={s.logo} aria-label="Logo">
               <Logo />
             </a>
           </Link>
           <nav className={s.navMenu}>
-            <Link href="/search">
-              <a className={s.link}>All</a>
-            </Link>
-            {links?.map((l) => (
-              <Link href={l.href} key={l.href}>
-                <a className={s.link}>{l.label}</a>
-              </Link>
-            ))}
+            <NavLinkList navItems={NAVIGATION_DATA} />
           </nav>
         </div>
-        {process.env.COMMERCE_SEARCH_ENABLED && (
-          <div className="justify-center flex-1 hidden lg:flex">
-            <Searchbar />
-          </div>
-        )}
         <div className="flex items-center justify-end flex-1 space-x-8">
+          {process.env.COMMERCE_SEARCH_ENABLED && (
+            <div className="justify-end flex-1 hidden lg:flex">
+              <Searchbar />
+            </div>
+          )}
           <UserNav />
         </div>
       </div>
