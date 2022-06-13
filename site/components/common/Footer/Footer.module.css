@@ -11,5 +11,5 @@
 }
 
 .text {
-  @apply mb-6 text-sm text-primary font-bold;
+  @apply mb-6 text-sm text-primary font-semibold tracking-wider;
 }
