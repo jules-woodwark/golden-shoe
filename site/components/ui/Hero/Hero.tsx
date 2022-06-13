@@ -27,8 +27,8 @@ const Hero: FC<Props> = ({
           <p>{description}</p>
           <Link href={linkUrl}>
             <a className="flex items-center text-accent-0 pt-3 font-bold hover:underline cursor-pointer w-max-content">
-              {linkText}
               <ArrowRight width="20" heigh="20" className="ml-1" />
+              {linkText}
             </a>
           </Link>
         </div>

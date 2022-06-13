@@ -7,12 +7,16 @@ interface MarqueeProps {
   className?: string
   children?: ReactNode[] | Component[] | any[]
   variant?: 'primary' | 'secondary'
+  title?: string
+  text?: string
 }
 
 const Marquee: FC<MarqueeProps> = ({
   className = '',
   children,
   variant = 'primary',
+  title,
+  text,
 }) => {
   const rootClassName = cn(
     s.root,
@@ -24,15 +28,21 @@ const Marquee: FC<MarqueeProps> = ({
   )
 
   return (
-    <FastMarquee gradient={false} className={rootClassName}>
-      {Children.map(children, (child) => ({
-        ...child,
-        props: {
-          ...child.props,
-          className: cn(child.props.className, `${variant}`),
-        },
-      }))}
-    </FastMarquee>
+    <section className={s.wrapper}>
+      <div className={s.textWrapper}>
+        {title && <h3 className={s.title}>{title}</h3>}
+        {text && <p className={s.text}>{text}</p>}
+      </div>
+      <FastMarquee gradient={false} className={rootClassName} pauseOnHover>
+        {Children.map(children, (child) => ({
+          ...child,
+          props: {
+            ...child.props,
+            className: cn(child.props.className, `${variant}`),
+          },
+        }))}
+      </FastMarquee>
+    </section>
   )
 }
 

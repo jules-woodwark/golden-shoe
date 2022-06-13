@@ -38,5 +38,9 @@
 
 .link {
   @apply mt-10 inline-block text-center bg-paletteYellow border
-  border-transparent rounded-md font-medium py-1 px-4 xs:py-2 xs:px-6 text-paletteBlue hover:opacity-75 tracking-wider uppercase mobile:py-3 mobile:px-8;
+  border-transparent rounded-md font-medium py-1 px-4 xs:py-2 xs:px-6 text-paletteBlue hover:opacity-90 tracking-wider uppercase mobile:py-3 mobile:px-8;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }

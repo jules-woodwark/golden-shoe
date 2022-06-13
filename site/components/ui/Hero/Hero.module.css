@@ -15,7 +15,7 @@
     @apply text-right leading-10 -mt-3 text-4xl;
   }
   .root {
-    @apply flex-row items-start justify-center py-20;
+    @apply flex-row items-start justify-center py-16;
   }
   .title {
     line-height: 3.5rem;

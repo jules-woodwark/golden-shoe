@@ -51,13 +51,13 @@ export default function Home({
         productUrl='/product/womens-crocks'
       />
       <Hero
-        className="bg-paletteLightGreen border-b border-t border-accent-2 w-full mb-8"
+        className="bg-paletteBlue border-b border-t border-accent-2 w-full mb-8"
         headline="Read all about it"
         description="Sign up to our newsletter today to get £10 off your next order"
         linkText="Sign up here"
         linkUrl="/newsletter"
       />
-      <Marquee>
+      <Marquee title="Back in black" text="It may be summer, but black is always in fashion. Find your next favourite pair of shoes below!">
         {products.slice(3).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />
         ))}

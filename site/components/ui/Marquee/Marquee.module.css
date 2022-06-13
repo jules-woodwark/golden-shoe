@@ -1,3 +1,7 @@
+.wrapper {
+  @apply my-6 mobile:my-20;
+}
+
 .root {
   @apply w-full min-w-full relative flex flex-row items-center overflow-hidden py-0;
   max-height: 320px;
@@ -11,6 +15,18 @@
 
 .root > div > * > *:nth-child(2) * {
   max-height: 100%;
+}
+
+.textWrapper {
+  @apply flex flex-col justify-center items-center my-8 px-4;
+}
+
+.title {
+  @apply flex justify-center uppercase italic font-semibold py-2 text-2xl xs:text-4xl mobile:text-5xl;
+}
+
+.text {
+  @apply italic text-gray-500 xs:text-lg sm:text-xl;
 }
 
 .primary {
