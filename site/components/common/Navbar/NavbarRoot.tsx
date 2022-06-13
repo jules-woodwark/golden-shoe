@@ -7,9 +7,9 @@ const NavbarRoot: FC = ({ children }) => {
   const { hasScrolled } = useScrollListener()
 
   return (
-    <div className={cn(s.root, { 'shadow-magical': hasScrolled })}>
+    <header className={cn(s.root, { 'shadow-magical': hasScrolled })}>
       {children}
-    </div>
+    </header>
   )
 }
 
