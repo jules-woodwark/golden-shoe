@@ -29,16 +29,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-MyApp.getInitialProps = async (appContext: AppContext) => {
-  const appProps = await App.getInitialProps(appContext)
+// MyApp.getInitialProps = async (appContext: AppContext) => {
+//   const appProps = await App.getInitialProps(appContext)
 
-  if (appContext.ctx.res?.statusCode === 404) {
-    appContext.ctx.res.writeHead(302, { Location: '/' })
-    appContext.ctx.res.end()
-    return
-  }
+//   if (appContext.ctx.res?.statusCode === 404) {
+//     appContext.ctx.res.writeHead(302, { Location: '/' })
+//     appContext.ctx.res.end()
+//     return
+//   }
 
-  return { ...appProps }
-}
+//   return { ...appProps }
+// }
 
 export default MyApp

@@ -1,13 +1,15 @@
 .root {
-  @apply border-t border-accent-2 bg-paletteWhite;
+  @apply bg-paletteWhite pt-1;
+}
+
+.wrapper {
+  @apply container mx-auto px-6 py-6 mt-5 flex flex-col items-center;
 }
 
 .link {
-  & > svg {
-    @apply transform duration-75 ease-linear;
-  }
+  @apply flex flex-initial items-center font-bold md:mr-24;
+}
 
-  &:hover > svg {
-    @apply scale-110;
-  }
+.text {
+  @apply mb-6 text-sm text-primary font-bold;
 }
