@@ -8,14 +8,20 @@
 
 .imageWrapper {
   @apply w-full max-w-xl hidden md:block;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .heroTitle {
-  @apply text-2xl xs:text-4xl mobile:text-5xl font-extrabold tracking-tight text-paletteBlue lg:text-6xl;
+  @apply text-2xl xs:text-4xl mobile:text-5xl font-extrabold tracking-tight text-paletteBlue;
+  @apply lg:text-6xl;
 }
 
 .goldWord {
-  @apply font-logo text-amber-500 inline-block mx-2 text-3xl xs:text-5xl mobile:text-6xl lg:text-7xl;
+  @apply font-logo text-amber-500 inline-block mx-2 text-3xl xs:text-5xl mobile:text-6xl;
+  @apply lg:text-7xl;
 }
 
 .underlined {

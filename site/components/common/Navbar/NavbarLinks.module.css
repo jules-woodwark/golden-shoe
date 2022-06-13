@@ -1,5 +1,5 @@
 .root {
-  @apply m-auto min-w-full bg-paletteBlue;
+  @apply m-auto min-w-full bg-paletteDarkBlue;
 }
 
 .container {

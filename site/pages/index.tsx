@@ -1,7 +1,7 @@
 import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
-import { Container, Marquee, SeasonBanner } from '@components/ui'
+import { Marquee, SeasonBanner, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
@@ -47,7 +47,15 @@ export default function Home({
         linkText="Shop now"
         linkHref="/search/summer"
         bannerSrc="/hero-crocks.png"
-        bannerImgAlt="Crock for summer"
+        bannerImgAlt="Women's crocks"
+        productUrl='product/womens-crocks'
+      />
+      <Hero
+        className="bg-paletteLightGreen border-b border-t border-accent-2 w-full mb-8"
+        headline="Read all about it"
+        description="Sign up to our newsletter today to get £10 off your next order"
+        linkText="Sign up here"
+        linkUrl="/newsletter"
       />
       <Marquee>
         {products.slice(3).map((product: any, i: number) => (

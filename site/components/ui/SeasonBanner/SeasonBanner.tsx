@@ -10,6 +10,7 @@ interface Props {
   linkText: string
   bannerSrc: string
   bannerImgAlt: string
+  productUrl: string
 }
 
 const changeTitle = (title: string) => {
@@ -45,6 +46,7 @@ const SeasonBanner: FC<Props> = ({
   linkHref,
   bannerSrc,
   bannerImgAlt,
+  productUrl,
 }) => {
   const newTitle = changeTitle(title)
 
@@ -60,15 +62,19 @@ const SeasonBanner: FC<Props> = ({
         </div>
       </div>
       <div className={s.imageWrapper}>
-        <Image
-          alt={bannerImgAlt}
-          src={bannerSrc}
-          height={300}
-          width={600}
-          quality="100"
-          layout="responsive"
-          priority
-        />
+        <Link href={productUrl}>
+          <a>
+            <Image
+              alt={bannerImgAlt}
+              src={bannerSrc}
+              height={300}
+              width={600}
+              quality="100"
+              layout="responsive"
+              priority
+            />
+          </a>
+        </Link>
       </div>
     </section>
   )
