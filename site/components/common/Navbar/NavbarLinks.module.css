@@ -11,7 +11,7 @@
 }
 
 .listRight {
-  @apply flex flex-row grow ml-auto lg:flex-none;
+  @apply flex flex-row grow ml-auto justify-center lg:flex-none;
 }
 
 .listItem {

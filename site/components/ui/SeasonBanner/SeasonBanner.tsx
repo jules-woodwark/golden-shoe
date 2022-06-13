@@ -53,7 +53,7 @@ const SeasonBanner: FC<Props> = ({
       <div className={s.wrapper}>
         <h1 className={s.heroTitle}>{newTitle}</h1>
         <p className={s.heroText}>{text}</p>
-        <div>
+        <div className={s.linkWrapper}>
           <Link href={linkHref}>
             <a className={s.link}>{linkText}</a>
           </Link>

@@ -71,6 +71,7 @@ module.exports = {
         120: '1.2',
       },
       screens: {
+        xs: '300px',
         mobile: '400px',
         lgx: '1100px',
       },

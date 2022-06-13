@@ -40,17 +40,15 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Container>
-        <SeasonBanner
-          title="Summer shoes have dropped"
-          text="This year, our new summer collection will get you those likes.
+      <SeasonBanner
+        title="Summer shoes have dropped"
+        text="This year, our new summer collection will get you those likes.
                       What are those?"
-          linkText="Summer Collection"
-          linkHref="/search/summer"
-          bannerSrc="/hero-crocks.png"
-          bannerImgAlt="Crock for summer"
-        />
-      </Container>
+        linkText="Shop now"
+        linkHref="/search/summer"
+        bannerSrc="/hero-crocks.png"
+        bannerImgAlt="Crock for summer"
+      />
       <Marquee>
         {products.slice(3).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />

@@ -1,21 +1,21 @@
 .root {
-  @apply relative bg-white overflow-hidden flex flex-row justify-center items-center;
+  @apply relative overflow-hidden flex justify-center items-center bg-white;
 }
 
 .wrapper {
-  @apply relative max-w-7xl pt-16 pb-80 sm:px-6 sm:max-w-lg sm:static sm:pt-24 sm:pb-40 lg:px-8 lg:pt-40 lg:pb-48;
+  @apply relative max-w-7xl py-8 px-2 sm:px-6 sm:max-w-lg sm:static sm:py-40 lg:px-8 lg:py-40;
 }
 
 .imageWrapper {
-  @apply w-full max-w-xl;
+  @apply w-full max-w-xl hidden md:block;
 }
 
 .heroTitle {
-  @apply text-4xl font-extrabold tracking-tight text-paletteBlue sm:text-6xl;
+  @apply text-2xl xs:text-4xl mobile:text-5xl font-extrabold tracking-tight text-paletteBlue lg:text-6xl;
 }
 
 .goldWord {
-  @apply font-logo text-amber-500 inline-block mx-2 sm:text-7xl;
+  @apply font-logo text-amber-500 inline-block mx-2 text-3xl xs:text-5xl mobile:text-6xl lg:text-7xl;
 }
 
 .underlined {
@@ -23,10 +23,14 @@
 }
 
 .heroText {
-  @apply mt-4 text-xl text-gray-500;
+  @apply mt-4 text-gray-500 xs:text-lg mobile:text-lg sm:text-xl;
+}
+
+.linkWrapper {
+  @apply flex flex-row justify-center md:justify-start;
 }
 
 .link {
   @apply mt-10 inline-block text-center bg-paletteYellow border
-  border-transparent rounded-md py-3 px-8 font-medium text-paletteBlue hover:opacity-75 tracking-wide;
+  border-transparent rounded-md font-medium py-1 px-4 xs:py-2 xs:px-6 text-paletteBlue hover:opacity-75 tracking-wider uppercase mobile:py-3 mobile:px-8;
 }
