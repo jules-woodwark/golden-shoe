@@ -8,12 +8,14 @@ const NavbarLinks: FC = () => {
   return (
     <Container className={s.root}>
       <Container className={s.container}>
-        <ul className="flex flex-row w-full justify-evenly sm:w-auto sm:mr-auto">
+        <ul className={s.listLeft}>
           <li className={s.listItem}>
             <Link href="/help/tracking">
               <a className={s.link}>
                 <Clock className={s.icon} />
-                <p>Order Tracking</p>
+                <p className={s.text}>
+                  <span className={s.span}>Order&nbsp;</span>Tracking
+                </p>
               </a>
             </Link>
           </li>
@@ -21,24 +23,28 @@ const NavbarLinks: FC = () => {
             <Link href="/help/returns">
               <a className={s.link}>
                 <Returns className={s.icon} />
-                <p>Online Returns</p>
+                <p className={s.text}>
+                  <span className={s.span}>Online&nbsp;</span>Returns
+                </p>
               </a>
             </Link>
           </li>
         </ul>
-        <ul className="hidden sm:flex flex-row ml-auto">
-          <li className={s.listItem}>
+        <ul className={s.listRight}>
+          <li className={`${s.listItem} ${s.location}`}>
             <Link href="/stores">
               <a className={s.link}>
                 <Location className={s.icon} />
-                <p>Store Finder</p>
+                <p className={s.text}>Store Finder</p>
               </a>
             </Link>
           </li>
           <li className={s.listItem}>
             <button className={s.link}>
               <Newsletter className={s.icon} />
-              <p>Get £10 off - Sign Up!</p>
+              <p className={s.text}>
+                <span className={s.span}>Get £10 off -&nbsp;</span>Sign Up!
+              </p>
             </button>
           </li>
         </ul>

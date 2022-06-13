@@ -45,6 +45,9 @@ module.exports = {
         paletteWhite: '#FFF7D6',
         paletteYellow: '#F9F871',
       },
+      flexGrow: {
+        2: 2,
+      },
       fontFamily: {
         logo: ['Caveat'],
       },

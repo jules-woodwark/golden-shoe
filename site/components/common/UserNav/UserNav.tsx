@@ -4,7 +4,7 @@ import s from './UserNav.module.css'
 import { Avatar } from '@components/common'
 import useCart from '@framework/cart/use-cart'
 import { useUI } from '@components/ui/context'
-import { Heart, Bag, Menu } from '@components/icons'
+import { Heart, Bag, Menu, Location } from '@components/icons'
 import CustomerMenuContent from './CustomerMenuContent'
 import useCustomer from '@framework/customer/use-customer'
 import React from 'react'
@@ -39,6 +39,13 @@ const UserNav: React.FC<{
   return (
     <nav className={cn(s.root, className)}>
       <ul className={s.list}>
+        <li className={`${s.item} ${s.location} `}>
+          <Link href="/stores">
+            <a>
+              <Location />
+            </a>
+          </Link>
+        </li>
         {process.env.COMMERCE_CART_ENABLED && (
           <li className={s.item}>
             <Button

@@ -11,6 +11,10 @@
   duration-100 flex items-center outline-none text-primary;
 }
 
+.location {
+  @apply lg:hidden;
+}
+
 .item:hover {
   @apply text-accent-6 transition scale-110 duration-100;
 }
