@@ -38,6 +38,7 @@ const Modal: FC<ModalProps> = ({ children, onClose }) => {
 
   return (
     <div className={s.root}>
+      <div className={s.backdrop} onClick={onClose}/>
       <div className={s.modal} role="dialog" ref={ref}>
         <button
           onClick={() => onClose()}

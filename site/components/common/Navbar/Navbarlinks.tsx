@@ -1,10 +1,18 @@
 import { FC } from 'react'
 import { Clock, Location, Newsletter, Returns } from '@components/icons'
 import { Container } from '@components/ui'
+import { useUI } from '@components/ui/context'
 import Link from 'next/link'
 import s from './NavbarLinks.module.css'
 
 const NavbarLinks: FC = () => {
+  const { openModal, setModalView } = useUI()
+
+  const handleClick = () => {
+    setModalView('NEWSLETTER_VIEW')
+    return openModal()
+  }
+
   return (
     <Container className={s.root}>
       <Container className={s.container}>
@@ -40,7 +48,7 @@ const NavbarLinks: FC = () => {
             </Link>
           </li>
           <li className={s.listItem}>
-            <button className={s.link}>
+            <button className={s.link} onClick={handleClick}>
               <Newsletter className={s.icon} />
               <p className={s.text}>
                 <span className={s.span}>Get £10 off -&nbsp;</span>Sign Up!

@@ -4,6 +4,12 @@
   -webkit-backdrop-filter: blur(0.8px);
 }
 
+.backdrop {
+  @apply absolute inset-0 bg-black bg-opacity-40 duration-100 ease-linear;
+  backdrop-filter: blur(0.8px);
+  -webkit-backdrop-filter: blur(0.8px);
+}
+
 .modal {
   @apply bg-primary p-12 border border-accent-2 relative;
 }

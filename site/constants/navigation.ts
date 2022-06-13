@@ -1,6 +1,10 @@
 const SUB_CATEGORIES = {
   womensSubCategories: [
     {
+      name: 'All',
+      slug: 'womens',
+    },
+    {
       name: 'High Heels',
       slug: 'high-heels',
     },
@@ -23,6 +27,10 @@ const SUB_CATEGORIES = {
   ],
   mensSubCategories: [
     {
+      name: 'All',
+      slug: 'mens',
+    },
+    {
       name: 'Sandals',
       slug: 'mens-sandals',
     },
@@ -36,6 +44,10 @@ const SUB_CATEGORIES = {
     },
   ],
   kidsSubCategories: [
+    {
+      name: 'All',
+      slug: 'kids',
+    },
     {
       name: 'Boots',
       slug: 'kids-sandals',

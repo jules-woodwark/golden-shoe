@@ -1,0 +1,22 @@
+.heading {
+  @apply text-center;
+}
+
+.table {
+  @apply border-collapse my-6 w-full border-2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.tableHeaders {
+  @apply text-center;
+}
+
+.tableRow {
+  @apply text-center;
+}
+
+.tableCell {
+  @apply text-center;
+}

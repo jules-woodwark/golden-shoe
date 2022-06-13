@@ -1,0 +1,3 @@
+.heading {
+  @apply text-4xl text-center tracking-wider mb-10;
+}

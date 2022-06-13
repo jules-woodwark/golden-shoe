@@ -27,9 +27,15 @@ const UserNav: React.FC<{
     toggleSidebar,
     closeSidebarIfPresent,
     openModal,
+    setModalView,
     setSidebarView,
     openSidebar,
   } = useUI()
+
+  const handleClick = () => {
+    setModalView('LOGIN_VIEW')
+    return openModal()
+  };
 
   const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
   const DropdownTrigger = isCustomerLoggedIn
@@ -80,7 +86,7 @@ const UserNav: React.FC<{
                 <button
                   aria-label="Menu"
                   className={s.avatarButton}
-                  onClick={() => (isCustomerLoggedIn ? null : openModal())}
+                  onClick={() => (isCustomerLoggedIn ? null : handleClick())}
                 >
                   <Avatar />
                 </button>
