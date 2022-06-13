@@ -48,7 +48,7 @@ export default function Home({
         linkHref="/search/summer"
         bannerSrc="/hero-crocks.png"
         bannerImgAlt="Women's crocks"
-        productUrl='product/womens-crocks'
+        productUrl='/product/womens-crocks'
       />
       <Hero
         className="bg-paletteLightGreen border-b border-t border-accent-2 w-full mb-8"

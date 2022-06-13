@@ -3,16 +3,19 @@
 }
 
 .title {
-  @apply text-accent-0 font-extrabold text-xl sm:text-2xl md:text-3xl leading-none tracking-tight lg:text-right lg:leading-10 lg:-mt-3;
+  @apply text-accent-0 text-2xl mobile:text-3xl font-extrabold leading-none tracking-tight;
 }
 
 .description {
-  @apply mt-4 text-lg leading-8 text-accent-1 mb-1 lg:text-xl lg:max-w-4xl;
+  @apply mt-4 leading-8 text-accent-1 mb-1 xs:text-lg sm:text-xl lg:max-w-4xl;
 }
 
 @screen lg {
+  .title {
+    @apply text-right leading-10 -mt-3 text-4xl;
+  }
   .root {
-    @apply flex-row items-start justify-center py-24;
+    @apply flex-row items-start justify-center py-20;
   }
   .title {
     line-height: 3.5rem;
@@ -24,6 +27,6 @@
 
 @screen xl {
   .title {
-    @apply text-6xl;
+    @apply text-5xl;
   }
 }

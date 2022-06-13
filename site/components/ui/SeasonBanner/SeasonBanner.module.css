@@ -29,7 +29,7 @@
 }
 
 .heroText {
-  @apply mt-4 text-gray-500 xs:text-lg mobile:text-lg sm:text-xl;
+  @apply mt-4 text-gray-500 xs:text-lg sm:text-xl;
 }
 
 .linkWrapper {
