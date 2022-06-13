@@ -1,3 +1,11 @@
-.navMenu {
-  @apply mx-8 w-full flex-1 lg:flex xl:space-x-6 xl:ml-6;
+.navLinkList {
+  @apply mx-2 w-full flex-1 lg:flex xl:space-x-6 xl:ml-6;
+}
+
+.navItem {
+  @apply h-auto;
+}
+
+.navItem:nth-child(5) {
+  @apply text-rose-600;
 }

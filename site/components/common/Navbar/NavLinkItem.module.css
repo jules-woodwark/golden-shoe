@@ -1,9 +1,5 @@
-.navItem {
-  @apply h-auto;
-}
-
 .navLink {
-  @apply block lg:p-6 lg:text-base font-bold;
+  @apply block antialiased py-6 text-lg lg:tracking-wider lg:px-2 lgx:px-4 xl:px-6;
 
   &:hover {
     @apply text-accent-9 text-amber-500 underline underline-offset-8;
@@ -11,9 +7,5 @@
 
   &:focus {
     @apply outline-none text-accent-8;
-  }
-
-  &:nth-child(5) {
-    @apply text-rose-600;
   }
 }

@@ -69,6 +69,7 @@ module.exports = {
       },
       screens: {
         mobile: '400px',
+        lgx: '1100px',
       },
     },
   },

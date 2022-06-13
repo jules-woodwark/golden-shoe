@@ -1,42 +1,43 @@
-import { FC, useState, useEffect } from 'react';
-import Link from 'next/link';
-import Dropdown from './Dropdown';
-import s from './NavLinkItem.module.css';
+import { FC, useState, useEffect } from 'react'
+import Link from 'next/link'
+import Dropdown from './Dropdown'
+import s from './NavLinkItem.module.css'
 
 interface Props {
-  name: string;
-  slug: string;
+  className: string
+  name: string
+  slug: string
   categories?: {
-    name: string;
-    slug: string;
-  }[];
+    name: string
+    slug: string
+  }[]
 }
 
-const NavLinkItem: FC<Props> = ({ name, slug, categories }) => {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [isOverCategory, setIsOverCategory] = useState(false);
-  const [isOverDropdown, setIsOverDropdown] = useState(false);
+const NavLinkItem: FC<Props> = ({ name, slug, categories, className }) => {
+  const [showDropdown, setShowDropdown] = useState(false)
+  const [isOverCategory, setIsOverCategory] = useState(false)
+  const [isOverDropdown, setIsOverDropdown] = useState(false)
 
   useEffect(() => {
     if (showDropdown && !isOverCategory && !isOverDropdown) {
-      setShowDropdown(false);
+      setShowDropdown(false)
     } else if ((!showDropdown && isOverCategory) || isOverDropdown) {
-      setShowDropdown(true);
+      setShowDropdown(true)
     }
-  }, [isOverCategory, isOverDropdown]);
+  }, [isOverCategory, isOverDropdown])
 
   const handleToggleCategory = () => {
-    setIsOverCategory((prevState) => !prevState);
-  };
+    setIsOverCategory((prevState) => !prevState)
+  }
 
   const handleToggleDropdown = () => {
-    setIsOverDropdown((prevState) => !prevState);
-  };
+    setIsOverDropdown((prevState) => !prevState)
+  }
 
   return (
     <li
       aria-haspopup="true"
-      className={s.navItem}
+      className={className}
       onMouseEnter={handleToggleCategory}
       onMouseLeave={handleToggleCategory}
     >
@@ -51,7 +52,7 @@ const NavLinkItem: FC<Props> = ({ name, slug, categories }) => {
         />
       )}
     </li>
-  );
-};
+  )
+}
 
-export default NavLinkItem;
+export default NavLinkItem

@@ -12,5 +12,5 @@
 }
 
 .navMenu {
-  @apply hidden ml-6 space-x-4 lg:block;
+  @apply hidden space-x-4 lg:block;
 }
