@@ -16,7 +16,7 @@ const Dropdown: FC<Props> = ({ categories, isShown, toggleDropdown }) => {
     const { name, slug } = category
 
     return (
-      <li key={i} className={s.listIten}>
+      <li key={i}>
         <Link href={`/search/${slug}`}>
           <a>{name}</a>
         </Link>

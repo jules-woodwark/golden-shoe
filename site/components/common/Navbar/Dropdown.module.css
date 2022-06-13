@@ -1,17 +1,17 @@
 .root {
-  @apply absolute left-0 p-8 mb-16 mt-2 sm:mb-0 shadow-xl bg-primary container mx-auto min-w-full flex flex-col;
+  @apply absolute left-0 text-lg p-8 mb-16 sm:mb-0 shadow-xl bg-primary container mx-auto min-w-full flex flex-col;
 }
 
 .list {
   @apply px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3;
+
+  & a {
+    &:hover {
+      @apply text-amber-500 underline;
+    }
+  }
 }
 
 .listTitle {
   @apply font-medium leading-tight text-2xl mt-0 mb-2 text-paletteDarkBlue;
-}
-
-.listItem {
-  &:hover {
-
-  }
 }
