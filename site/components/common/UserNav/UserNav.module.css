@@ -1,5 +1,6 @@
 .root {
-  @apply relative flex items-center;
+  @apply relative flex items-center mobile:space-x-8;
+  margin-left: 0 !important;
 }
 
 .list {

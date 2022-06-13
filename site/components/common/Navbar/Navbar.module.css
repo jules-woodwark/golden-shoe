@@ -3,12 +3,16 @@
   min-height: 74px;
 }
 
+.logo {
+  @apply m-0;
+}
+
 .container {
-  @apply mx-auto max-w-8xl px-6;
+  @apply mx-auto max-w-8xl px-1 sm:px-6;
 }
 
 .nav {
-  @apply flex flex-row py-2 items-center;
+  @apply flex flex-col mobile:flex-row py-2 items-center;
 }
 
 .navMenu {
