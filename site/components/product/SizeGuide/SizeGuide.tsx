@@ -1,22 +1,22 @@
-import { FC } from 'react';
-import { useUI } from '@components/ui/context'
 import s from './SizeGuide.module.css'
 
 //  dynamically generate from array with forEach() or JSON
 //  conditionally render either Mens/Womens/Kids sizes
 
-const SizeGuide: FC = () => {
+const SizeGuide = () => {
   return (
     <>
       <h3 className={s.heading}>Size Guide</h3>
       <table className={s.table}>
-        <tbody>
-          <tr className={s.tableRow}>
+        <thead>
+          <tr>
             <th className={s.tableHeaders}>UK</th>
             <th className={s.tableHeaders}>EU</th>
             <th className={s.tableHeaders}>US</th>
             <th className={s.tableHeaders}>Japan</th>
           </tr>
+        </thead>
+        <tbody>
           <tr className={s.tableRow}>
             <td className={s.tableCell}>3</td>
             <td className={s.tableCell}>35.5</td>

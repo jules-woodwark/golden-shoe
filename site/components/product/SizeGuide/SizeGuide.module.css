@@ -1,0 +1,24 @@
+.heading {
+  @apply text-center mt-14 mb-4 text-3xl italic font-semibold md:mb-8 md:text-4xl md:mt-0;
+}
+
+.table {
+  @apply min-w-full text-xl;
+}
+
+.tableHeaders {
+  @apply text-xl font-medium text-gray-900 px-3 py-2 md:px-6 md:py-4 md:text-2xl;
+}
+
+.tableRow {
+  @apply bg-white text-center font-normal;
+
+  &:nth-child(2n) {
+    @apply bg-gray-200;
+  }
+}
+
+
+.tableCell {
+  @apply text-center px-2 py-1 mobile:px-6 sm:px-10 md:py-2 lg:px-12;
+}

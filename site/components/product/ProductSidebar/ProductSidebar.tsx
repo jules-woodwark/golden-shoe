@@ -17,7 +17,7 @@ interface ProductSidebarProps {
 
 const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
   const addItem = useAddItem()
-  const { openSidebar } = useUI()
+  const { openSidebar, openModal, setModalView } = useUI()
   const [loading, setLoading] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
@@ -40,6 +40,11 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
     }
   }
 
+  const handleClick = () => {
+    setModalView('SIZEGUIDE_VIEW')
+    openModal()
+  }
+
   return (
     <div className={className}>
       <ProductOptions
@@ -51,6 +56,11 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         className="pb-4 break-words w-full max-w-xl"
         html={product.descriptionHtml || product.description}
       />
+      <div>
+        <Button onClick={handleClick} className={s.sizeGuideBtn}>
+          Size Guide
+        </Button>
+      </div>
       <div className="flex flex-row justify-between items-center">
         <Rating value={4} />
         <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>
