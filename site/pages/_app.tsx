@@ -1,6 +1,7 @@
 import '@assets/main.css'
 import '@assets/chrome-bug.css'
 import 'keen-slider/keen-slider.min.css'
+import 'react-medium-image-zoom/dist/styles.css'
 
 import { FC, useEffect } from 'react'
 import App, { AppContext } from 'next/app'

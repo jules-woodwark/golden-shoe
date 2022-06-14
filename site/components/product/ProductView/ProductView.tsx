@@ -1,15 +1,16 @@
-import cn from 'clsx'
-import Image from 'next/image'
-import s from './ProductView.module.css'
 import { FC } from 'react'
 import type { Product } from '@commerce/types/product'
-import usePrice from '@framework/product/use-price'
 import { WishlistButton } from '@components/wishlist'
 import { ProductSlider, ProductCard } from '@components/product'
 import { Container, Text } from '@components/ui'
 import { SEO } from '@components/common'
+import cn from 'clsx'
+import Image from 'next/image'
+import usePrice from '@framework/product/use-price'
 import ProductSidebar from '../ProductSidebar'
 import ProductTag from '../ProductTag'
+import Zoom from 'react-medium-image-zoom'
+import s from './ProductView.module.css'
 
 interface ProductViewProps {
   product: Product
@@ -37,15 +38,17 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
               <ProductSlider key={product.id}>
                 {product.images.map((image, i) => (
                   <div key={image.url} className={s.imageContainer}>
-                    <Image
-                      className={s.img}
-                      src={image.url!}
-                      alt={image.alt || 'Product Image'}
-                      width={600}
-                      height={600}
-                      priority={i === 0}
-                      quality="85"
-                    />
+                    <Zoom>
+                      <Image
+                        className={s.img}
+                        src={image.url!}
+                        alt={image.alt || 'Product Image'}
+                        width={600}
+                        height={600}
+                        priority={i === 0}
+                        quality="85"
+                      />
+                    </Zoom>
                   </div>
                 ))}
               </ProductSlider>

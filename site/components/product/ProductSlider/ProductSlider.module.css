@@ -34,7 +34,7 @@
   overflow-y: hidden;
   overflow-x: auto;
   white-space: nowrap;
-  height: 125px;
+  height: 170px;
   scrollbar-width: none;
 }
 
@@ -43,14 +43,17 @@
   display: none;
 }
 
+@screen mobile {
+  .album {
+    height: 250px;
+  }
+}
+
 @screen md {
   .thumb:hover {
     transform: scale(1.02);
   }
-
-  .album {
-    height: 182px;
-  }
+  
   .thumb {
     width: 235px;
   }
