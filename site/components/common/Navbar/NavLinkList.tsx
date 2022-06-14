@@ -19,7 +19,6 @@ interface NavItem {
 const NavLinkList: FC<Props> = ({ navItems }) => {
   const navItemsMap = navItems.map((navItem: NavItem, i) => {
     const { label, href, categories } = navItem
-    console.log(navItem)
     return (
       <NavLinkItem
         key={i}
