@@ -1,6 +1,9 @@
 .root {
-  @apply transition-colors ease-in-out duration-500
-  absolute top-0 left-0 z-20 pr-16;
+  @apply transition-colors ease-in-out duration-500 top-0 left-0 z-20 mobile:absolute mobile:pr-16;
+  
+  @media only screen and (max-width: 400px) {
+    text-align: center;
+  }
 }
 
 .root .name {
@@ -11,7 +14,7 @@
 }
 
 .root .name span {
-  @apply py-4 px-6 bg-primary text-primary font-bold;
+  @apply py-4 px-0 bg-primary text-primary font-bold mobile:px-6;
   min-height: 70px;
   font-size: inherit;
   letter-spacing: inherit;
