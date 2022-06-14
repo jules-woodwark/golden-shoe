@@ -36,6 +36,7 @@ module.exports = {
         blue: 'var(--blue)',
         green: 'var(--green)',
         red: 'var(--red)',
+        paletteSuccessGreen: '#73C98C',
         paletteBlue: '#466B73',
         paletteDarkBlue: '#2F4858',
         paletteDarkGreen: '#44876D',

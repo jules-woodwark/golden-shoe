@@ -1,5 +1,5 @@
 .root {
-  @apply text-paletteGreen flex flex-col items-center;
+  @apply text-paletteSuccessGreen flex flex-col items-center;
 }
 
 .icon {
