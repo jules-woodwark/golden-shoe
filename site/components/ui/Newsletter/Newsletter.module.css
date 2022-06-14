@@ -1,0 +1,55 @@
+.root {
+  @apply flex flex-col justify-center;
+}
+
+.heading {
+  @apply text-4xl leading-normal mb-2 text-center;
+}
+
+.text {
+  @apply font-semibold italic underline underline-offset-8 mb-4 decoration-amber-500 text-center;
+}
+
+.form {
+  @apply flex flex-col justify-center;
+}
+
+.label {
+  @apply my-1;
+}
+
+.field {
+  @apply w-full py-1.5 border-2 p-2;
+}
+
+.radioLabel {
+  @apply mt-4 mb-1;
+}
+
+.radioGroup {
+  @apply w-full flex flex-row justify-evenly mb-2
+}
+
+.radioField {
+  @apply mr-2 flex flex-row items-center;
+}
+
+.radioInput {
+  @apply mr-2;
+}
+
+.button {
+  @apply px-6 py-4 leading-4 mt-4;
+}
+
+.errorMessage {
+  @apply italic text-rose-400 my-1;
+}
+
+.errorMessageLast {
+  @apply italic text-rose-400 mb-3 -mt-2;
+}
+
+.loading {
+  @apply flex justify-center mt-4;
+}

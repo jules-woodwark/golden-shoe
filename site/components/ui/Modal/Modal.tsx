@@ -1,6 +1,6 @@
 import { FC, useRef, useEffect, useCallback } from 'react'
 import s from './Modal.module.css'
-import FocusTrap from '@lib/focus-trap'
+// import FocusTrap from '@lib/focus-trap'
 import { Cross } from '@components/icons'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
@@ -47,7 +47,8 @@ const Modal: FC<ModalProps> = ({ children, onClose }) => {
         >
           <Cross className="h-6 w-6" />
         </button>
-        <FocusTrap focusFirst>{children}</FocusTrap>
+        {children}
+        {/* <FocusTrap focusFirst>{children}</FocusTrap> */}
       </div>
     </div>
   )

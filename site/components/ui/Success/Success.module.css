@@ -1,0 +1,11 @@
+.root {
+  @apply text-paletteGreen flex flex-col items-center;
+}
+
+.icon {
+  @apply w-12 h-12 mb-8 transition-opacity;
+}
+
+.text {
+  @apply text-lg tracking-wide w-full transition-opacity;
+}

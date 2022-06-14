@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { useScrollListener } from 'hooks'
+import useScrollListener from '@hooks/useScrollListener'
 import cn from 'clsx'
 import s from './Navbar.module.css'
 

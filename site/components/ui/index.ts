@@ -17,6 +17,7 @@ export { default as Section } from './Section'
 export { default as Sidebar } from './Sidebar'
 export { default as SizeGuide } from './SizeGuide'
 export { default as Skeleton } from './Skeleton'
+export { default as Success } from './Success'
 export { default as Text } from './Text'
 
 export * from './Dropdown/Dropdown'
