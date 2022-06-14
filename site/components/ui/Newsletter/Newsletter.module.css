@@ -3,7 +3,7 @@
 }
 
 .heading {
-  @apply text-4xl leading-normal mb-2 text-center;
+  @apply text-2xl mt-12 leading-normal mb-2 text-center mobile:text-4xl mobile:mt-0;
 }
 
 .text {

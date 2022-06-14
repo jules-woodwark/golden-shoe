@@ -1,5 +1,5 @@
 .root {
-  @apply fixed bg-black bg-opacity-40 flex items-center inset-0 z-50 justify-center;
+  @apply fixed max-w-full box-content bg-black bg-opacity-40 flex items-center inset-0 z-50 justify-center;
   backdrop-filter: blur(0.8px);
   -webkit-backdrop-filter: blur(0.8px);
 }
@@ -11,7 +11,7 @@
 }
 
 .modal {
-  @apply bg-primary p-12 border border-accent-2 relative;
+  @apply bg-primary p-2 mobile:p-12 border border-accent-2 relative;
 }
 
 .modal:focus {
