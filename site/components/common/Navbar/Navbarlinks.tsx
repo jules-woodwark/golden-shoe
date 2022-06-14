@@ -6,6 +6,7 @@ import Link from 'next/link'
 import s from './NavbarLinks.module.css'
 
 const NavbarLinks: FC = () => {
+  //  repeat this code in Navbarlinks, could create custom hook
   const { openModal, setModalView } = useUI()
 
   const handleClick = () => {

@@ -2,35 +2,40 @@ import React, { FC } from 'react'
 import { Container } from '@components/ui'
 import { ArrowRight } from '@components/icons'
 import s from './Hero.module.css'
-import Link from 'next/link'
+import Button from '../Button'
 
 interface Props {
   className?: string
   headline: string
   description: string
-  linkText: string
-  linkUrl: string
+  btnText: string
+  btnFn: () => void
 }
 
 const Hero: FC<Props> = ({
   headline,
   description,
   className,
-  linkText,
-  linkUrl,
+  btnText,
+  btnFn,
 }) => {
+  const handleClick = () => {
+    btnFn()
+  }
+
   return (
     <div className={className}>
       <Container className={s.root}>
         <h2 className={s.title}>{headline}</h2>
         <div className={s.description}>
           <p>{description}</p>
-          <Link href={linkUrl}>
-            <a className="flex items-center text-accent-0 pt-3 font-bold hover:underline cursor-pointer w-max-content">
-              <ArrowRight width="20" heigh="20" className="ml-1" />
-              {linkText}
-            </a>
-          </Link>
+          <Button
+            onClick={handleClick}
+            className={s.btn}
+          >
+            <ArrowRight width="20" heigh="20" className="ml-1" />
+            {btnText}
+          </Button>
         </div>
       </Container>
     </div>

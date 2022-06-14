@@ -30,3 +30,7 @@
     @apply text-5xl;
   }
 }
+
+.btn {
+  @apply flex items-center border-0 text-accent-0 p-0 font-bold hover:underline cursor-pointer bg-paletteBlue;
+}

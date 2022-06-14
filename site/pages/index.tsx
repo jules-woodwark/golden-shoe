@@ -2,8 +2,8 @@ import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
 import { Marquee, SeasonBanner, Hero } from '@components/ui'
-// import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import { useUI } from '@components/ui'
 
 export async function getStaticProps({
   preview,
@@ -38,6 +38,13 @@ export async function getStaticProps({
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { openModal, setModalView } = useUI()
+  
+  const handleShowNewsletter = () => {
+    setModalView('NEWSLETTER_VIEW')
+    return openModal()
+  }
+
   return (
     <>
       <SeasonBanner
@@ -54,8 +61,8 @@ export default function Home({
         className="bg-paletteBlue border-b border-t border-accent-2 w-full mb-8"
         headline="Read all about it"
         description="Sign up to our newsletter today to get £10 off your next order"
-        linkText="Sign up here"
-        linkUrl="/newsletter"
+        btnText="Sign up here"
+        btnFn={handleShowNewsletter}
       />
       <Marquee title="Back in black" text="It may be summer, but black is always in fashion. Find your next favourite pair of shoes below!">
         {products.slice(3).map((product: any, i: number) => (
