@@ -1,22 +1,31 @@
 import { FC } from 'react'
 import { NavData } from '../../../constants/navigation'
-import NavItem from './NavLinkItem'
+import NavLinkItem from './NavLinkItem'
 import s from './NavLinkList.module.css'
 
 interface Props {
   navItems: NavData
 }
 
-const NavLinkList: FC<Props> = ({ navItems }) => {
-  const navItemsMap = navItems.map((navItem, i) => {
-    const { name, slug, categories } = navItem
+interface NavItem {
+  label: string
+  href: string
+  categories?: {
+    name: string
+    href: string
+  }[]
+}
 
+const NavLinkList: FC<Props> = ({ navItems }) => {
+  const navItemsMap = navItems.map((navItem: NavItem, i) => {
+    const { label, href, categories } = navItem
+    console.log(navItem)
     return (
-      <NavItem
+      <NavLinkItem
         key={i}
         className={s.navItem}
-        name={name}
-        slug={slug}
+        name={label}
+        href={href}
         categories={categories}
       />
     )

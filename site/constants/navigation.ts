@@ -1,90 +1,108 @@
+export const NAVLINKS = [
+  {
+    label: 'Womens',
+    href: 'search/womens',
+  },
+  {
+    label: 'Mens',
+    href: 'search/Mens',
+  },
+  {
+    label: 'Kids',
+    href: 'search/kids',
+  },
+  {
+    label: 'Summer',
+    href: 'search/summer',
+  },
+  {
+    label: 'Sale',
+    href: 'search/sale',
+  },
+]
+
 const SUB_CATEGORIES = {
   womensSubCategories: [
     {
       name: 'All',
-      slug: 'womens',
+      href: 'womens',
     },
     {
       name: 'High Heels',
-      slug: 'high-heels',
+      href: 'high-heels',
     },
     {
       name: 'Pumps',
-      slug: 'pumps',
+      href: 'pumps',
     },
     {
       name: 'Sandals',
-      slug: 'womens-sandals',
+      href: 'womens-sandals',
     },
     {
       name: 'Slippers',
-      slug: 'womens-slippers',
+      href: 'womens-slippers',
     },
     {
       name: 'Trainers',
-      slug: 'womens-trainers',
+      href: 'womens-trainers',
     },
   ],
   mensSubCategories: [
     {
       name: 'All',
-      slug: 'mens',
+      href: 'mens',
     },
     {
       name: 'Sandals',
-      slug: 'mens-sandals',
+      href: 'mens-sandals',
     },
     {
       name: 'Slippers',
-      slug: 'mens-slippers',
+      href: 'mens-slippers',
     },
     {
       name: 'Trainers',
-      slug: 'mens-trainers',
+      href: 'mens-trainers',
     },
   ],
   kidsSubCategories: [
     {
       name: 'All',
-      slug: 'kids',
+      href: 'kids',
     },
     {
       name: 'Boots',
-      slug: 'kids-sandals',
+      href: 'kids-sandals',
     },
     {
       name: 'Trainers',
-      slug: 'kids-trainers',
+      href: 'kids-trainers',
     },
   ],
-};
+}
 
-const NAVIGATION_DATA = [
+const MEGA_MENU_DATA = [
   {
-    name: "Women's",
-    slug: 'search/womens',
+    ...NAVLINKS[0],
     categories: SUB_CATEGORIES.womensSubCategories,
   },
   {
-    name: "Men's",
-    slug: 'search/mens',
+    ...NAVLINKS[1],
     categories: SUB_CATEGORIES.mensSubCategories,
   },
   {
-    name: 'Kids',
-    slug: 'search/kids',
+    ...NAVLINKS[2],
     categories: SUB_CATEGORIES.kidsSubCategories,
   },
   {
-    name: 'Summer',
-    slug: 'search/summer',
+    ...NAVLINKS[3],
   },
   {
-    name: 'Sale',
-    slug: 'search/sale',
+    ...NAVLINKS[4],
   },
-];
+]
 
-export type NavData = typeof NAVIGATION_DATA;
+export type NavData = typeof MEGA_MENU_DATA
 
-export default NAVIGATION_DATA;
+export default MEGA_MENU_DATA

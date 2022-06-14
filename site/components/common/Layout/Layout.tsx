@@ -12,16 +12,17 @@ import {
 import { useAcceptCookies } from '@lib/hooks/useAcceptCookies'
 import { useRouter } from 'next/router'
 import { useUI } from '@components/ui/context'
-import CheckoutSidebarView from '@components/checkout/CheckoutSidebarView'
-import LoginView from '@components/auth/LoginView'
-import PaymentMethodView from '@components/checkout/PaymentMethodView'
 import type { Category } from '@commerce/types/site'
 import type { Link as LinkProps } from '../UserNav/MenuSidebarView'
 import type { Page } from '@commerce/types/page'
+import { NAVLINKS } from 'constants/navigation'
+import cn from 'clsx'
 import dynamic from 'next/dynamic'
 import CartSidebarView from '@components/cart/CartSidebarView'
+import CheckoutSidebarView from '@components/checkout/CheckoutSidebarView'
+import LoginView from '@components/auth/LoginView'
+import PaymentMethodView from '@components/checkout/PaymentMethodView'
 import ShippingView from '@components/checkout/ShippingView'
-import cn from 'clsx'
 import s from './Layout.module.css'
 
 const Loading = () => (
@@ -94,7 +95,8 @@ const SidebarView: React.FC<{
       {sidebarView === 'SHIPPING_VIEW' && <ShippingView />}
       {sidebarView === 'PAYMENT_VIEW' && <PaymentMethodView />}
       {sidebarView === 'CHECKOUT_VIEW' && <CheckoutSidebarView />}
-      {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={links} />}
+      {/* {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={links} />} */}
+      {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={NAVLINKS} />}
     </Sidebar>
   )
 }

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Logo, Container } from '@components/ui'
 import { Searchbar, UserNav } from '@components/common'
-import { NAVIGATION_DATA } from 'constants/index'
+import { MEGA_MENU_DATA } from '@constants'
 import Link from 'next/link'
 import NavbarLinks from './Navbarlinks'
 import NavbarRoot from './NavbarRoot'
@@ -29,7 +29,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
             </a>
           </Link>
           <nav className={s.navMenu}>
-            <NavLinkList navItems={NAVIGATION_DATA} />
+            <NavLinkList navItems={MEGA_MENU_DATA} />
           </nav>
         </div>
         <div className="flex items-center justify-end flex-1 space-x-8">

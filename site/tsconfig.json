@@ -26,7 +26,8 @@
       "@framework": ["..\\packages\\shopify\\src"],
       "@framework/*": ["..\\packages\\shopify\\src/*"],
       "@hooks/*": ["lib/hooks/*"],
-      "@validation": ["models/validationSchema"]
+      "@validation": ["models/validationSchema"],
+      "@constants": ["constants/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],

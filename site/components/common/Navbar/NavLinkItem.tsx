@@ -6,14 +6,14 @@ import s from './NavLinkItem.module.css'
 interface Props {
   className: string
   name: string
-  slug: string
+  href: string
   categories?: {
     name: string
-    slug: string
+    href: string
   }[]
 }
 
-const NavLinkItem: FC<Props> = ({ name, slug, categories, className }) => {
+const NavLinkItem: FC<Props> = ({ name, href, categories, className }) => {
   const [showDropdown, setShowDropdown] = useState(false)
   const [isOverCategory, setIsOverCategory] = useState(false)
   const [isOverDropdown, setIsOverDropdown] = useState(false)
@@ -41,7 +41,7 @@ const NavLinkItem: FC<Props> = ({ name, slug, categories, className }) => {
       onMouseEnter={handleToggleCategory}
       onMouseLeave={handleToggleCategory}
     >
-      <Link href={`/${slug}`}>
+      <Link href={`/${href}`}>
         <a className={s.navLink}>{name}</a>
       </Link>
       {categories && (

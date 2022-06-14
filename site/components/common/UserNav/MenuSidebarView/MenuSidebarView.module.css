@@ -4,4 +4,8 @@
 
 .item {
   @apply text-xl font-bold py-2;
+
+  & a {
+    @apply hover:underline hover:text-amber-500;
+  }
 }

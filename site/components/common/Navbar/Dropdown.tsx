@@ -6,18 +6,18 @@ interface Props {
   isShown: boolean
   categories: {
     name: string
-    slug: string
+    href: string
   }[]
   toggleDropdown: () => void
 }
 
 const Dropdown: FC<Props> = ({ categories, isShown, toggleDropdown }) => {
   const categoriesMap = categories.map((category, i) => {
-    const { name, slug } = category
+    const { name, href } = category
 
     return (
       <li key={i}>
-        <Link href={`/search/${slug}`}>
+        <Link href={`/search/${href}`}>
           <a>{name}</a>
         </Link>
       </li>

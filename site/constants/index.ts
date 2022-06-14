@@ -1,1 +1,1 @@
-export { default as NAVIGATION_DATA } from './navigation';
+export { default as MEGA_MENU_DATA } from './navigation';
