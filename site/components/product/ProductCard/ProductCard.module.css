@@ -13,31 +13,31 @@
   & .header .name span,
   & .header .price,
   & .wishlistButton {
-    @apply bg-secondary text-secondary;
+    @apply bg-paletteBlue text-secondary;
   }
 
   &:nth-child(6n + 1) .header .name span,
   &:nth-child(6n + 1) .header .price,
   &:nth-child(6n + 1) .wishlistButton {
-    @apply bg-violet text-white;
+    @apply bg-paletteBlush text-white;
   }
 
   &:nth-child(6n + 5) .header .name span,
   &:nth-child(6n + 5) .header .price,
   &:nth-child(6n + 5) .wishlistButton {
-    @apply bg-blue text-white;
+    @apply bg-paletteDarkBlue text-white;
   }
 
   &:nth-child(6n + 3) .header .name span,
   &:nth-child(6n + 3) .header .price,
   &:nth-child(6n + 3) .wishlistButton {
-    @apply bg-pink text-white;
+    @apply bg-paletteIndigo text-white;
   }
 
   &:nth-child(6n + 6) .header .name span,
   &:nth-child(6n + 6) .header .price,
   &:nth-child(6n + 6) .wishlistButton {
-    @apply bg-cyan text-white;
+    @apply bg-palettePurple text-white;
   }
 }
 
