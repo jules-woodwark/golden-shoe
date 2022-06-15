@@ -21,11 +21,10 @@ To clone the repo:
 ## Run minimal version locally
 
 ```bash
-    $ cd golden-shoe
-    $ cd site
-    $ yarn
-    $ yarn dev
-yarn dev
+$ cd golden-shoe
+$ cd site
+$ yarn
+$ yarn dev
 ```
 ## Further Development
 
