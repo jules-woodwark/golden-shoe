@@ -23,7 +23,7 @@ const StoreForm: FC<Props> = ({ setStoreValue }) => {
   }
 
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <Formik
         initialValues={{
           location: '',
@@ -37,26 +37,22 @@ const StoreForm: FC<Props> = ({ setStoreValue }) => {
         }}
       >
         {({ errors, touched }) => (
-          <Form className="w-full flex flex-col">
+          <Form className={s.form}>
             <label htmlFor="location" hidden>
               Search location
             </label>
-            <div className="flex flex-row">
+            <div className={s.fieldWrapper}>
               <Field
                 id="location"
                 name="location"
                 placeholder="Enter a city name"
-                className="rounded w-4/5 border-2 px-2 py-2 mr-2 text-lg h-full"
+                className={s.field}
               ></Field>
               {isSubmitting ? (
                 <LoadingDots />
               ) : (
-                <button
-                  type="submit"
-                  className="text-white bg-paletteDarkBlue w-1/6
-                  px-2 py-2 rounded flex justify-center flex-row items-center hover:bg-paletteBlue"
-                >
-                  <Search className="w-6 h-6" />
+                <button type="submit" className={s.button}>
+                  <Search className={s.search} />
                 </button>
               )}
             </div>
@@ -66,16 +62,17 @@ const StoreForm: FC<Props> = ({ setStoreValue }) => {
           </Form>
         )}
       </Formik>
-      <div className="flex justify-center mt-8">
+      <div className={s.locationWrapper}>
         {isSubmitting ? (
           <LoadingDots />
         ) : (
-          <div className="w-full">
-            <Button className="w-full rounded" onClick={handleLocationClick}>
-              Use my current location
-              <Location className="ml-1" />
-            </Button>
-          </div>
+          <button
+            className={`${s.button} ${s.locationBtn}`}
+            onClick={handleLocationClick}
+          >
+            Use my current location
+            <Location className={s.location} />
+          </button>
         )}
       </div>
     </div>

@@ -18,16 +18,21 @@ const Stores = () => {
     >
       {!searchValue ? (
         <>
-          <p className="mb-4 text-center text-lg italic text-amber-500">
+          <p className="mb-4 text-center text-md sm:text-lg italic text-amber-500">
             Find store details, facilities and opening hours
           </p>
           <StoreForm setStoreValue={setSearchValue} />
         </>
       ) : (
         <div className="flex flex-col">
-          <Button onClick={handleClick} className="rounded">
+          <button
+            onClick={handleClick}
+            className="text-white bg-paletteDarkBlue p-2
+  rounded flex justify-center flex-row items-center hover:bg-paletteBlue sm:p-3 md:p-4 w-full;
+}"
+          >
             New Search
-          </Button>
+          </button>
           <h3 className="text-center mt-4 text-lg italic">Search results:</h3>
           <StoreList value={searchValue} />
         </div>

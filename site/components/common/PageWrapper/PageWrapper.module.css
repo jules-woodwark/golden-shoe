@@ -1,7 +1,7 @@
 .root {
-  @apply flex flex-col items-center mt-20 m-auto max-w-xl p-6;
+  @apply flex flex-col items-center mt-20 m-auto max-w-md mobile:max-w-lg sm:max-w-xl p-1 mobile:p-4 sm:p-6;
 }
 
 .heading {
-  @apply text-3xl text-center mb-8 font-semibold tracking-tight text-gray-900 dark:text-white;
+  @apply text-2xl text-center mb-4 font-semibold tracking-tight text-gray-900 dark:text-white sm:text-3xl sm:mb-6;
 }
