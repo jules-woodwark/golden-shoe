@@ -1,13 +1,13 @@
 import { FC } from 'react'
-import { Button, LoadingDots } from '@components/ui'
-import { Search, Location } from '@components/icons'
 import { Formik, Field, Form, FormikHelpers } from 'formik'
 import { LocationInputSchema } from '@validation'
+import { LoadingDots } from '@components/ui'
+import { Search, Location } from '@components/icons'
 import useFakeRequestTimer from '@lib/hooks/useFakeRequestTimer'
 import s from './StoreForm.module.css'
 
 interface Props {
-  setStoreValue: (str: string) => void
+  setStoreValue: (storeId: string) => void
 }
 
 interface Values {

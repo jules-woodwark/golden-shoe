@@ -1,9 +1,19 @@
+import { useState } from 'react'
 import { Layout } from '@components/common'
+import { PageWrapper } from '@components/common'
+import { OrderForm, OrderSummary } from '@components/order'
 
 const Tracking = () => {
-  return <h1>Order Tracking</h1>
-};
+  const [orderId, setOrderId] = useState<string | null>(null)
 
-Tracking.Layout = Layout;
+  return (
+    <PageWrapper title="Track your order">
+      <OrderForm setOrderValue={setOrderId} />
+      {orderId && <OrderSummary orderId={orderId} />}
+    </PageWrapper>
+  )
+}
 
-export default Tracking;
+Tracking.Layout = Layout
+
+export default Tracking

@@ -1,0 +1,19 @@
+.root {
+  @apply p-4 flex flex-col items-center mx-auto mt-10;
+}
+
+.title {
+  @apply mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white;
+}
+
+.text {
+  @apply text-amber-500 mb-2;
+}
+
+.textTwo {
+  @apply mb-2;
+}
+
+.bold {
+  @apply font-semibold;
+}

@@ -1,0 +1,24 @@
+.form {
+  @apply w-full flex flex-col;
+}
+
+.fieldWrapper {
+  @apply flex flex-row;
+}
+
+.field {
+  @apply rounded w-4/5 border-2 p-1 mr-2  h-full sm:text-lg sm:p-2;
+}
+
+.button {
+  @apply text-white bg-paletteDarkBlue w-1/6 p-1
+  rounded flex justify-center flex-row items-center hover:bg-paletteBlue sm:p-2;
+}
+
+.search {
+  @apply w-6 h-6;
+}
+
+.errorMessage {
+  @apply italic text-rose-400 my-1;
+}
