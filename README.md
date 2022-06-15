@@ -7,15 +7,29 @@ Built on top of Next JS Commerce
 The all-in-one starter kit for high-performance e-commerce sites. With a few clicks, Next.js developers can clone, deploy and fully customize their own store.
 Start right now at [nextjs.org/commerce](https://nextjs.org/commerce)
 
-Demo live at: [demo.vercel.store](https://demo.vercel.store/)
+## Installation
+
+View the application live [here](https://golden-shoe-one.vercel.app/)
+
+To clone the repo:
+
+    $ git clone git@github.com:jules-woodwark/golden-shoe.git
+    $ cd golden-shoe
+    $ cd site
+    $ yarn
 
 ## Run minimal version locally
 
-> To run a minimal version of Next.js Commerce you can start with the default local provider `@vercel/commerce-local` that has disabled all features (cart, auth) and use static files for the backend
-
 ```bash
-yarn # run this command in root folder of the mono repo
+    $ cd golden-shoe
+    $ cd site
+    $ yarn
+    $ yarn dev
 yarn dev
 ```
+## Further Development
 
-> If you encounter any problems while installing and running for the first time, please see the Troubleshoot section
+- Add Jest & Enzyme and create unit tests.
+- Add Page transitions
+- Integrate order tracking, online returns & shop search with real data
+- Improve accessbility, especially trapping focus, in Modal & Sidedrawer components.
