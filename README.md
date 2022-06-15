@@ -31,4 +31,4 @@ $ yarn dev
 - Add Jest & Enzyme and create unit tests.
 - Add Page transitions
 - Integrate order tracking, online returns & shop search with real data
-- Improve accessbility, especially trapping focus, in Modal & Sidedrawer components.
+- Improve accessibility, especially trapping focus, in Modal & Sidedrawer components.
