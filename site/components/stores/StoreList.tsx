@@ -15,7 +15,7 @@ const StoreList: FC<Props> = ({ value }) => {
 
   return searchResult.length > 0 ? (
     <ul className="mt-4">
-      <li key={searchResult[0].id}>
+      <li>
         <StoreItem storeData={searchResult[0]} />
       </li>
     </ul>

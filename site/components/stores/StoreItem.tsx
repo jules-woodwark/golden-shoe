@@ -9,8 +9,8 @@ interface Props {
 }
 
 const StoreItem: FC<Props> = ({ storeData }) => {
-  const facilitiesMap = storeData.facilities.map((item) => (
-    <li className="list-disc mx-4">{item}</li>
+  const facilitiesMap = storeData.facilities.map((item, i) => (
+    <li key={i} className="list-disc mx-4">{item}</li>
   ))
 
   return (
