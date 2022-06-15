@@ -4,8 +4,8 @@ import s from './OrderCard.module.css'
 
 interface Props {
   title: string
-  text: string
-  textTwo: string
+  text?: string
+  textTwo?: string
   orderId: string
   orderDate: string
   icon: ReactNode
