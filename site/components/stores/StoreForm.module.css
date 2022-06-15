@@ -1,0 +1,3 @@
+.errorMessage {
+  @apply italic text-rose-400 my-1;
+}

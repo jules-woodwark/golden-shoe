@@ -99,7 +99,7 @@ const Newsletter: FC = () => {
                 {errors.lastName && touched.lastName ? (
                   <p className={s.errorMessage}>{errors.lastName}</p>
                 ) : null}
-                <label htmlFor="firstName" className={s.label}>
+                <label htmlFor="email" className={s.label}>
                   Email address
                 </label>
                 <Field

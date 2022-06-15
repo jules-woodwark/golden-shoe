@@ -1,18 +1,19 @@
 import { FC, ReactNode } from 'react'
-import { Heading, Section } from '@components/ui'
+import s from './PageWrapper.module.css'
 
 interface Props {
   title: string
+  subText?: string
   children: ReactNode
 }
 
 const PageWrapper: FC<Props> = ({ title, children }) => {
   return (
-    <Section>
-      <Heading>{title}</Heading>
+    <section className={s.root}>
+      <h1 className={s.heading}>{title}</h1>
       {children}
-    </Section>
-  );
-};
+    </section>
+  )
+}
 
-export default PageWrapper;
+export default PageWrapper
